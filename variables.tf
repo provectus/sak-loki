@@ -50,7 +50,7 @@ variable "namespace_name" {
 variable "chart_version" {
   type        = string
   description = "A Helm Chart version"
-  default     = "2.3.1"
+  default     = "2.4.1"
 }
 
 variable "tags" {
