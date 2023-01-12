@@ -14,8 +14,8 @@ Grafana Labs is proud to lead the development of the Loki project, building firs
 ```
 module "loki" {
   module_depends_on = [module.argocd]
-  source            = "../../modules/logging/loki"
-  cluster_name      = module.kubernetes.cluster_name
+  source            = "github.com/provectus/sak-loki.git"
+  cluster_name      = module.eks.cluster_id
   argocd            = module.argocd.state
   domains           = local.domain
 }
