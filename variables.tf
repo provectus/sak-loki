@@ -18,7 +18,7 @@ variable "module_depends_on" {
 
 variable "cluster_name" {
   type        = string
-  default     = null
+  default     = "swiss-army-kube"
   description = "A name of the Amazon EKS cluster"
 }
 
