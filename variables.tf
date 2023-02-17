@@ -53,8 +53,3 @@ variable "chart_version" {
   default     = "2.3.1"
 }
 
-variable "tags" {
-  type        = map(string)
-  default     = {}
-  description = "A tags for attaching to new created AWS resources"
-}
