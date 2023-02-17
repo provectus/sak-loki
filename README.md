@@ -23,7 +23,9 @@ module "loki" {
 
 ## Requirements
 
-No requirements.
+```
+terraform >= 1.1
+ ```
 
 ## Providers
 
