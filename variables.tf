@@ -18,7 +18,7 @@ variable "module_depends_on" {
 
 variable "cluster_name" {
   type        = string
-  default     = null
+  default     = "swiss-army-kube"
   description = "A name of the Amazon EKS cluster"
 }
 
@@ -53,8 +53,3 @@ variable "chart_version" {
   default     = "2.3.1"
 }
 
-variable "tags" {
-  type        = map(string)
-  default     = {}
-  description = "A tags for attaching to new created AWS resources"
-}

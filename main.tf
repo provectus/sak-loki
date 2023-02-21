@@ -1,7 +1,3 @@
-data "aws_eks_cluster" "this" {
-  name = var.cluster_name
-}
-
 # creating grafana password
 resource "random_password" "grafana_loki_password" {
   depends_on = [
