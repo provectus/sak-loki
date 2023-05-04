@@ -20,17 +20,6 @@ resource "aws_kms_ciphertext" "grafana_loki_password" {
   plaintext = local.password
 }
 
-# Create namespace logging
-resource "kubernetes_namespace" "this" {
-  depends_on = [
-    var.module_depends_on
-  ]
-  count = var.namespace == "" ? 1 - local.argocd_enabled : 0
-  metadata {
-    name = var.namespace_name
-  }
-}
-
 resource "helm_release" "this" {
   count = 1 - local.argocd_enabled
 
@@ -120,13 +109,13 @@ locals {
         }
       }
       "syncPolicy" = {
-        "syncOptions" = [
-          "CreateNamespace=true"
-        ]
         "automated" = {
           "prune"    = true
           "selfHeal" = true
         }
+      }
+      "SyncOptions" = {
+        "CreateNamespace" = true
       }
     }
   }
