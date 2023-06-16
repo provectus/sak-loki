@@ -1,3 +1,4 @@
+# Loki
 Loki is a horizontally-scalable, highly-available, multi-tenant log aggregation system inspired by Prometheus. It is designed to be very cost effective and easy to operate. It does not index the contents of the logs, but rather a set of labels for each log stream.
 
 The Loki project was started at Grafana Labs in 2018, and annouced at KubeCon Seattle. Loki is released under the Apache 2.0 License.
@@ -10,7 +11,15 @@ Grafana Labs is proud to lead the development of the Loki project, building firs
 
 [Loki Source](https://github.com/grafana/loki)
 
-## Example how add with module
+
+## Loki is part of Swiss Army Kube project
+Check out main repo of Swiss Army Kube for more information about the project in general.
+
+**[Swiss Army Kube](https://github.com/provectus/swiss-army-kube)**
+|
+**[Contributing Guide](https://github.com/provectus/swiss-army-kube/blob/master/CONTRIBUTING.md)**
+
+## Example how to use this module
 
 ```
 module "loki" {
@@ -71,6 +80,6 @@ No modules.
 
 ## Outputs
 
-| Name                                                                                                                       | Description                                                    |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| <a name="output_path_to_grafana_loki_password"></a> [path_to_grafana_loki_password](#output_path_to_grafana_loki_password) | A SystemManager ParemeterStore key with Grafana admin password |
+| Name | Description |
+|------|-------------|
+| <a name="output_path_to_grafana_loki_password"></a> [path\_to\_grafana\_loki\_password](#output\_path\_to\_grafana\_loki\_password) | A SystemManager ParemeterStore key with Grafana admin password |
